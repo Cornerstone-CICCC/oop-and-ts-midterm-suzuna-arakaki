@@ -31,14 +31,3 @@ export class TotalCounter extends Component {
     return calcTotal;
   }
 }
-
-// const fixedTotal = this.calculateTotalElement.innerHTML;
-// fixedTotal.toFixed(2);
-// console.log(fixedTotal);
-// console.log(this.calculateTotalElement.innerHTML);
-// this.calculateTotalElement.innerHTML.toFixed(2);
-// this.calculateTotalElement.innerHTML = fixedTotal;
-// const fixedTotal = this.state.cart.reduce(
-//   (total, acc) => (total + acc.quantity * acc.price).toFixed(2),
-//   0,
-// );

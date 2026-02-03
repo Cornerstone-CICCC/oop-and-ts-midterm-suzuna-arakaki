@@ -24,6 +24,21 @@
   color: var(--text-color);
 }
 
+.container > .header {
+  font-size: 1.5rem;
+  padding: 2rem;
+  background-color: var(--second-color);
+  position: sticky;
+  top: 0;
+}
+
+.container > .header > span {
+  background-color: red;
+  color: var(--bg-light-gray);
+  padding: 0 1.5rem;
+  border-radius: 5px;
+}
+
 main > .product-list > h2 {
   font-size: 3rem;
   margin: 2rem auto;
@@ -31,7 +46,7 @@ main > .product-list > h2 {
 
 main > .product-list > ul {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 main > .product-list > ul > li {
@@ -42,7 +57,7 @@ main > .product-list > ul > li {
   list-style: none;
   padding: 1rem;
   margin-bottom: 4rem;
-  max-height: 700px;
+  max-height: 1000px;
 }
 
 main > .product-list > ul > li > img {
@@ -93,21 +108,19 @@ main > .product-list > ul > li > .add-to-cart-btn:hover {
 }
 
 .sidebar {
-  /* background-color: var(--bg-white); */
   background-color: var(--bg-light-gray);
 }
 
 .sidebar > div > div {
   position: sticky;
   top: 0;
-  padding: 2rem 0;
+  padding: 1.5rem;
   z-index: 1001;
-  background-color: var(--bg-light-gray);
+  background-color: var(--second-color);
 }
 
 .sidebar > div > div > h3 {
   font-size: 2.5rem;
-  /* padding: 2rem 0; */
 }
 
 .sidebar > div > div > .total-sum {
@@ -193,11 +206,31 @@ main > .product-list > ul > li > .add-to-cart-btn:hover {
   opacity: 0.9;
 }
 
+@media screen and (min-width: 768px) {
+  main > .product-list > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 2000px;
     margin: 0 auto;
   }
+
+  .container > .header {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+
+  .container > .header > span {
+    background-color: red;
+    color: var(--bg-light-gray);
+    padding: 0 1.5rem;
+    border-radius: 5px;
+  }
+
   main > .product-list > ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
