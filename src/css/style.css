@@ -1,1 +1,238 @@
 /* YOUR CSS HERE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #25343f; /* Dark gray */
+  --primary-color: #ff9b51; /* Light orange */
+  --second-color: #bfc9d1; /* Middle light gray */
+  --bg-light-gray: #eaefef; /* Light gray */
+  --bg-white: #fff; /* white */
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  background-color: var(--bg-light-gray);
+  color: var(--text-color);
+}
+
+.container > .header {
+  font-size: 1.5rem;
+  padding: 2rem;
+  background-color: var(--second-color);
+  position: sticky;
+  top: 0;
+}
+
+.container > .header > span {
+  background-color: red;
+  color: var(--bg-light-gray);
+  padding: 0 1.5rem;
+  border-radius: 5px;
+}
+
+main > .product-list > h2 {
+  font-size: 3rem;
+  margin: 2rem auto;
+}
+
+main > .product-list > ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+main > .product-list > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  max-height: 1000px;
+}
+
+main > .product-list > ul > li > img {
+  max-width: 100%;
+  max-height: 350px;
+}
+
+main > .product-list > ul > li > .product-title {
+  display: block;
+  font-size: 1.5rem;
+  max-width: 80%;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+main > .product-list > ul > li > .product-description {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1rem;
+  max-width: 370px;
+}
+
+main > .product-list > ul > li > .product-price {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+main > .product-list > ul > li > .add-to-cart-btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  /* font-size: 1rem; */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  /* opacity: 0.8; */
+  transition: ease 0.2s;
+}
+
+main > .product-list > ul > li > .add-to-cart-btn:hover {
+  /* opacity: 1; */
+  font-size: large;
+  border-bottom: 1px black solid;
+}
+
+.sidebar {
+  background-color: var(--bg-light-gray);
+}
+
+.sidebar > div > div {
+  position: sticky;
+  top: 0;
+  padding: 1.5rem;
+  z-index: 1001;
+  background-color: var(--second-color);
+}
+
+.sidebar > div > div > h3 {
+  font-size: 2.5rem;
+}
+
+.sidebar > div > div > .total-sum {
+  font-size: 2rem;
+}
+
+.sidebar > div > div > .total-sum > span {
+  font-size: 2.5rem;
+}
+
+.sidebar > div > .cart-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sidebar > div > .cart-items > li {
+  background-color: var(--bg-white);
+  list-style: none;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+
+.sidebar > div > .cart-items > li > img {
+  max-width: 100%;
+  max-height: 350px;
+}
+
+.sidebar > div > .cart-items > li > .cart-name {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.sidebar > div > .cart-items > li > .cart-price {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.sidebar > div > .cart-items > li > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.sidebar > div > .cart-items > li > div > .cart-quantity {
+  font-size: 1.75rem;
+}
+
+.sidebar > div > .cart-items > li > div > button {
+  font-size: 1.25rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: none;
+  color: var(--bg-light-gray);
+  background-color: var(--text-color);
+  opacity: 0.6;
+  transition: ease 0.2s;
+}
+
+.sidebar > div > .cart-items > li > div > button:hover {
+  opacity: 1;
+}
+
+.sidebar > div > .cart-items > li > .delete-btn {
+  font-size: 1.25rem;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: 3px red solid;
+  /* color: var(--bg-light-gray); */
+  color: black;
+  background-color: var(--bg-white);
+  opacity: 0.6;
+  transition: ease 0.2s;
+}
+
+.sidebar > div > .cart-items > li > .delete-btn:hover {
+  color: var(--bg-white);
+  background-color: red;
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 768px) {
+  main > .product-list > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+
+  .container > .header {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+
+  .container > .header > span {
+    background-color: red;
+    color: var(--bg-light-gray);
+    padding: 0 1.5rem;
+    border-radius: 5px;
+  }
+
+  main > .product-list > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
